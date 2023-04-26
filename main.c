@@ -1,76 +1,67 @@
-/*******************************************************************************************
-*
-*   raylib [core] example - Basic window
-*
-*   Welcome to raylib!
-*
-*   To test examples, just press F6 and execute raylib_compile_execute script
-*   Note that compiled executable is placed in the same folder as .c file
-*
-*   You can find all basic examples on C:\raylib\raylib\examples folder or
-*   raylib official webpage: www.raylib.com
-*
-*   Enjoy using raylib. :)
-*
-*   Example originally created with raylib 1.0, last time updated with raylib 1.0
-*
-*   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
-*   BSD-like license that allows static linking with closed source software
-*
-*   Copyright (c) 2013-2023 Ramon Santamaria (@raysan5)
-*
-********************************************************************************************/
+/****************************************************************************
+  This is the basic template for our main game loop, containing one screen.
+  
+  Make sure there are NO tabs and all lines are 80 characters or under.
+****************************************************************************/
 
+/* Header files and global variables. */
 #include "raylib.h"
 
-float xPos = 0.0f;
-float yPos = 0.0f;
-float radius = 50.0f;
-float velocity = 1000.0f;
-
-
-//------------------------------------------------------------------------------------
-// Program main entry point
-//------------------------------------------------------------------------------------
-int main(void)
+/********************************************************************
+  Set starting values for every variable prior to game launch.
+  Initialize system settings, i.e. window size, framerate, etc... 
+********************************************************************/
+void mainGameInit(void)
 {
-  // Initialization
-  //--------------------------------------------------------------------------------------
-  const int screenWidth = 1280;
-  const int screenHeight = 720;
 
-  InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+};
 
-  SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
-  //--------------------------------------------------------------------------------------
+/*************************************************************************** 
+  This function runs once per frame, contains all frame data and per frame
+  game logic. 
+***************************************************************************/
+void mainGameUpdate(void)
+{
+  /* Makes the game not exit when you press escape. */
+  SetExitKey(KEY_NULL);
 
-  // Main game loop
-  while (!WindowShouldClose())    // Detect window close button or ESC key
+  /* Main game loop */
+  while (!WindowShouldClose())
   {
-    /* Update */ 
-    if (IsKeyDown(KEY_A))
-      xPos -= velocity * GetFrameTime();
-    if (IsKeyDown(KEY_D))
-      xPos += velocity * GetFrameTime();
-    if (IsKeyDown(KEY_W))
-      yPos -= velocity * GetFrameTime();
-    if (IsKeyDown(KEY_S))
-      yPos += velocity * GetFrameTime();
+    /* Update logic for in game events */
 
-    // TODO: Update your variables here
+    /* TODO: Update player and world variables */
 
-    /* Graphics and visuals go here */
+    /* Graphics and visuals go here, after game logic */
     BeginDrawing();
 
+    /* Always clear the screen & set the background color first. */
     ClearBackground(RAYWHITE);
 
-    DrawCircle(xPos, yPos, radius, RED);
 
     EndDrawing();
   }
+};
 
-  /* De - Initialization */
-  CloseWindow();        // Close window and OpenGL context
+/**************************************************************
+  Shut down all proccesses and clean up any remaining memory.
+**************************************************************/
+void mainGameExit(void)
+{
+  CloseWindow();
+};
 
+int main(void)
+{ 
+  /* Start the game. */
+  mainGameInit();
+
+  /* Run the game each frame. */
+  mainGameUpdate();
+
+  /* Exit the game, close the application. */
+  mainGameExit();
+  
+  /* End the program. */
   return 0;
 }
