@@ -1,0 +1,3 @@
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\x64\Debug\SummerGame.vcxproj.CopyComplete
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\x64\Debug\SummerGame.exe
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\x64\Debug\raylib.dll
