@@ -1,6 +1,9 @@
-#ifndef helper_h
-#define helper_h
+//
+// Title:       Helper Functions Header
+// Created:     4/26/23
+// Authors:     Jason, Andy
+//  
 
-//maybe work?
+//core functions
 
-#endif //helper_h
+void fullScreen();
