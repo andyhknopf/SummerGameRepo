@@ -1,4 +1,5 @@
 #pragma once
+#include "raylib.h"
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
 
-extern const int screenWidth = 800;
-extern const int screenHeight = 450;

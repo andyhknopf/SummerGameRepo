@@ -25,6 +25,13 @@
 #include "raylib.h"
 #include "helper.h"
 #include "init.h"
+#include "collision.h"
+
+int mouseX;
+int mouseY;
+
+
+
 
 //------------------------------------------------------------------------------------
 // Program main entry point
@@ -33,30 +40,44 @@ int main(void)
 {
   // Initialization
   //--------------------------------------------------------------------------------------
+  struct Rectangle box;
+  Color boxColor = GREEN;
+  box.x = SCREEN_WIDTH / 2;
+  box.y = SCREEN_HEIGHT / 2;
+  box.width = 50;
+  box.height = 50;
+  
 
-  InitWindow(screenWidth, screenHeight, "Game window");
+
+  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Game window");
 
   SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
   //--------------------------------------------------------------------------------------
-
+   
   // Main game loop
   while (!WindowShouldClose())    // Detect window close button or ESC key
   {
-    // Update
-    //----------------------------------------------------------------------------------
-    // TODO: Update your variables here
-    //----------------------------------------------------------------------------------
+    mouseX = GetMouseX();
+    mouseY = GetMouseY();
 
-    // Draw
-    //----------------------------------------------------------------------------------
+    // mouse and box collision check
+    if (ptRecCheck(mouseX, mouseY, box))
+    {
+      boxColor = RED;
+    }
+    else
+    {
+      boxColor = GREEN;
+    }
 
     fullScreen();
 
     BeginDrawing();
 
+
     ClearBackground(RAYWHITE);
 
-    DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+    DrawRectangle(box.x, box.y, box.width, box.height, boxColor);
 
     EndDrawing();
     //----------------------------------------------------------------------------------

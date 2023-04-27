@@ -135,6 +135,7 @@
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="collision.h" />
     <ClInclude Include="helper.h" />
     <ClInclude Include="init.h" />
     <ClInclude Include="raylib.h" />

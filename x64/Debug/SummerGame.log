@@ -1,6 +1,6 @@
-﻿  helper.c
-  main.c
-main.obj : error LNK2005: screenWidth already defined in helper.obj
-main.obj : error LNK2005: screenHeight already defined in helper.obj
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-C:\Users\jason\source\repos\SummerGameRepo\x64\Debug\SummerGame.exe : fatal error LNK1169: one or more multiply defined symbols found
+﻿  main.c
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\main.c(80,22): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\main.c(80,29): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\main.c(80,36): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\main.c(80,47): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+  SummerGame.vcxproj -> D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\x64\Debug\SummerGame.exe
