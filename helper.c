@@ -4,6 +4,7 @@
 // Authors:     Jason, Andy
 //
 
+#include "raylib.h"
 #include "helper.h"
 
 void fullScreen() 
@@ -14,7 +15,7 @@ void fullScreen()
             // see what display we are on right now
             int display = GetCurrentMonitor();
 
-
+            
             if (IsWindowFullscreen())
             {
                 // if we are full screen, then go back to the windowed size
@@ -28,6 +29,11 @@ void fullScreen()
 
             // toggle the state
             ToggleFullscreen();
+
+            //fix screen size if necessary
+            if (!IsWindowFullscreen()) {
+                SetWindowSize(screenWidth, screenHeight);
+            }
         }
 }
 

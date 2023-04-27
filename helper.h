@@ -4,6 +4,8 @@
 // Authors:     Jason, Andy
 //  
 
+#include "init.h"
+
 //core functions
 
 void fullScreen();

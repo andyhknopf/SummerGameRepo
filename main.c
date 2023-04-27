@@ -20,7 +20,11 @@
 *   Copyright (c) 2013-2023 Ramon Santamaria (@raysan5)
 *
 ********************************************************************************************/
+
+//header links
 #include "raylib.h"
+#include "helper.h"
+#include "init.h"
 
 //------------------------------------------------------------------------------------
 // Program main entry point
@@ -29,10 +33,8 @@ int main(void)
 {
   // Initialization
   //--------------------------------------------------------------------------------------
-  const int screenWidth = 800;
-  const int screenHeight = 450;
 
-  InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+  InitWindow(screenWidth, screenHeight, "Game window");
 
   SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
   //--------------------------------------------------------------------------------------
@@ -47,6 +49,9 @@ int main(void)
 
     // Draw
     //----------------------------------------------------------------------------------
+
+    fullScreen();
+
     BeginDrawing();
 
     ClearBackground(RAYWHITE);
