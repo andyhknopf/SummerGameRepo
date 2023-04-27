@@ -8,8 +8,6 @@
 
 void fullScreen() 
 {
-    while (!WindowShouldClose())    // Detect window close button or ESC key
-    {
         // check for alt + enter
         if (IsKeyPressed(KEY_F11))
         {
@@ -31,6 +29,10 @@ void fullScreen()
             // toggle the state
             ToggleFullscreen();
         }
-    }
+}
+
+void menu()
+{
+
 }
 

@@ -7,3 +7,4 @@
 //core functions
 
 void fullScreen();
+void menu();
