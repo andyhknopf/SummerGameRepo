@@ -10,6 +10,7 @@
 #include "raylib.h"
 #include "helper.h"
 #include "init.h"
+#include "player.h"
 
 //------------------------------------------------------------------------------------
 // Program main entry point
@@ -19,7 +20,7 @@ int main(void)
   // Initialization
   //--------------------------------------------------------------------------------------
 
-  InitWindow(screenWidth, screenHeight, "Game window");
+  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Game window");
 
   SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
   //--------------------------------------------------------------------------------------
@@ -32,6 +33,7 @@ int main(void)
     // TODO: Update your variables here
     //----------------------------------------------------------------------------------
 
+
     // Draw
     //----------------------------------------------------------------------------------
 
@@ -40,8 +42,6 @@ int main(void)
     BeginDrawing();
 
     ClearBackground(RAYWHITE);
-
-    DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
     EndDrawing();
     //----------------------------------------------------------------------------------

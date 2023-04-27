@@ -1,4 +1,8 @@
 #include "init.h"
 
-const screenWidth = 1280;
-const screenHeight = 720;
+void playerInit(struct player player){
+	player.health = 100;
+	player.speed = 100;
+	player.stealth = 10;
+}
+

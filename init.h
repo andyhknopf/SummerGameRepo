@@ -1,4 +1,11 @@
 #pragma once
+#include "player.h"
 
-extern const int screenWidth;
-extern const int screenHeight;
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
+
+//global variables
+struct player player;
+
+//function definitions
+void playerInit(struct player player);

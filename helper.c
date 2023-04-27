@@ -16,11 +16,10 @@ void fullScreen()
             // see what display we are on right now
             int display = GetCurrentMonitor();
 
-            
             if (IsWindowFullscreen())
             {
                 // if we are full screen, then go back to the windowed size
-                SetWindowSize(screenWidth, screenHeight);
+                SetWindowSize(SCREEN_WIDTH, SCREEN_HEIGHT);
             }
             else
             {
@@ -33,7 +32,7 @@ void fullScreen()
 
             //fix screen size if necessary
             if (!IsWindowFullscreen()) {
-                SetWindowSize(screenWidth, screenHeight);
+                SetWindowSize(SCREEN_WIDTH, SCREEN_HEIGHT);
             }
         }
 }

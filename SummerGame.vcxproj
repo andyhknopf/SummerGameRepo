@@ -134,10 +134,12 @@
     </ClCompile>
     <ClCompile Include="init.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="player.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helper.h" />
     <ClInclude Include="init.h" />
+    <ClInclude Include="player.h" />
     <ClInclude Include="raylib.h" />
   </ItemGroup>
   <ItemGroup>
