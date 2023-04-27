@@ -1,6 +1,2 @@
-﻿  helper.c
-  main.c
-main.obj : error LNK2005: screenWidth already defined in helper.obj
-main.obj : error LNK2005: screenHeight already defined in helper.obj
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-C:\Users\jason\source\repos\SummerGameRepo\x64\Debug\SummerGame.exe : fatal error LNK1169: one or more multiply defined symbols found
+﻿  init.c
+  SummerGame.vcxproj -> C:\Users\jason\source\repos\SummerGameRepo\x64\Debug\SummerGame.exe

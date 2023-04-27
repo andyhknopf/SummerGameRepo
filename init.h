@@ -1,4 +1,4 @@
 #pragma once
 
-extern const int screenWidth = 800;
-extern const int screenHeight = 450;
+extern const int screenWidth;
+extern const int screenHeight;

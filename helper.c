@@ -1,11 +1,12 @@
 //
-// Title:       Helper Functions 
+// Title:       helper.c
 // Created:     4/26/23
 // Authors:     Jason, Andy
 //
 
 #include "raylib.h"
 #include "helper.h"
+#include "init.h"
 
 void fullScreen() 
 {

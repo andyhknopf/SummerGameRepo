@@ -21,6 +21,9 @@
     <ClCompile Include="helper.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="raylib.h">

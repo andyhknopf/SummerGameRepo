@@ -1,10 +1,8 @@
 //
-// Title:       Helper Functions Header
+// Title:       helper.h
 // Created:     4/26/23
 // Authors:     Jason, Andy
 //  
-
-#include "init.h"
 
 //core functions
 

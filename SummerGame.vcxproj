@@ -132,6 +132,7 @@
       <AdditionalUsingDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\jason\source\repos\SummerGameRepo;</AdditionalUsingDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\jason\source\repos\SummerGameRepo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="init.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
