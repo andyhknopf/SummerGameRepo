@@ -1,69 +1,67 @@
-/****************************************************************************
-  This is the basic template for our main game loop, containing one screen.
-  
-  Make sure there are NO tabs and all lines are 80 characters or under.
-****************************************************************************/
+/*******************************************************************************************
+*
+*   raylib [core] example - Basic window
+*
+*   Welcome to raylib!
+*
+*   To test examples, just press F6 and execute raylib_compile_execute script
+*   Note that compiled executable is placed in the same folder as .c file
+*
+*   You can find all basic examples on C:\raylib\raylib\examples folder or
+*   raylib official webpage: www.raylib.com
+*
+*   Enjoy using raylib. :)
+*
+*   Example originally created with raylib 1.0, last time updated with raylib 1.0
+*
+*   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
+*   BSD-like license that allows static linking with closed source software
+*
+*   Copyright (c) 2013-2023 Ramon Santamaria (@raysan5)
+*
+********************************************************************************************/
 
-/* Header files and global variables. */
 #include "raylib.h"
-#include "helper.h"
 
-/********************************************************************
-  Set starting values for every variable prior to game launch.
-  Initialize system settings, i.e. window size, framerate, etc... 
-********************************************************************/
-void mainGameInit(void)
+//------------------------------------------------------------------------------------
+// Program main entry point
+//------------------------------------------------------------------------------------
+int main(void)
 {
+  // Initialization
+  //--------------------------------------------------------------------------------------
+  const int screenWidth = 800;
+  const int screenHeight = 450;
 
-};
+  InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
-/*************************************************************************** 
-  This function runs once per frame, contains all frame data and per frame
-  game logic. 
-***************************************************************************/
-void mainGameUpdate(void)
-{
-  /* Makes the game not exit when you press escape. */
-  SetExitKey(KEY_NULL);
-  fullScreen();
+  SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+  //--------------------------------------------------------------------------------------
 
-  /* Main game loop */
-  while (!WindowShouldClose())
+  // Main game loop
+  while (!WindowShouldClose())    // Detect window close button or ESC key
   {
-    /* Update logic for in game events */
+    // Update
+    //----------------------------------------------------------------------------------
+    // TODO: Update your variables here
+    //----------------------------------------------------------------------------------
 
-    /* TODO: Update player and world variables */
-
-    /* Graphics and visuals go here, after game logic */
+    // Draw
+    //----------------------------------------------------------------------------------
     BeginDrawing();
 
-    /* Always clear the screen & set the background color first. */
     ClearBackground(RAYWHITE);
 
+    DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
     EndDrawing();
+    //----------------------------------------------------------------------------------
   }
-};
 
-/**************************************************************
-  Shut down all proccesses and clean up any remaining memory.
-**************************************************************/
-void mainGameExit(void)
-{
-  CloseWindow();
-};
+  // De-Initialization
+  //--------------------------------------------------------------------------------------
+  CloseWindow();        // Close window and OpenGL context
+  //--------------------------------------------------------------------------------------
 
-int main(void)
-{ 
-  /* Start the game. */
-  mainGameInit();
-
-  /* Run the game each frame. */
-  mainGameUpdate();
-
-  /* Exit the game, close the application. */
-  mainGameExit();
-  
-  /* End the program. */
   return 0;
 }
