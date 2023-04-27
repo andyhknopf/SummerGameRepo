@@ -1,2 +1,6 @@
 ﻿  main.c
-  SummerGame.vcxproj -> C:\Users\jason\source\repos\SummerGameRepo\x64\Debug\SummerGame.exe
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\main.c(80,22): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\main.c(80,29): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\main.c(80,36): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\main.c(80,47): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+  SummerGame.vcxproj -> D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\x64\Debug\SummerGame.exe

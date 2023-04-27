@@ -132,14 +132,12 @@
       <AdditionalUsingDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\jason\source\repos\SummerGameRepo;</AdditionalUsingDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\jason\source\repos\SummerGameRepo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="init.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="player.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="collision.h" />
     <ClInclude Include="helper.h" />
     <ClInclude Include="init.h" />
-    <ClInclude Include="player.h" />
     <ClInclude Include="raylib.h" />
   </ItemGroup>
   <ItemGroup>

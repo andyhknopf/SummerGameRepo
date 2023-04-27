@@ -1,12 +1,11 @@
 //
-// Title:       helper.c
+// Title:       Helper Functions 
 // Created:     4/26/23
 // Authors:     Jason, Andy
 //
 
 #include "raylib.h"
 #include "helper.h"
-#include "init.h"
 
 void fullScreen() 
 {
@@ -16,6 +15,7 @@ void fullScreen()
             // see what display we are on right now
             int display = GetCurrentMonitor();
 
+            
             if (IsWindowFullscreen())
             {
                 // if we are full screen, then go back to the windowed size
