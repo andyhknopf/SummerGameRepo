@@ -6,6 +6,7 @@
 
 /* Header files and global variables. */
 #include "raylib.h"
+#include "helper.h"
 
 /********************************************************************
   Set starting values for every variable prior to game launch.
@@ -24,6 +25,7 @@ void mainGameUpdate(void)
 {
   /* Makes the game not exit when you press escape. */
   SetExitKey(KEY_NULL);
+  fullScreen();
 
   /* Main game loop */
   while (!WindowShouldClose())
