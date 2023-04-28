@@ -30,9 +30,6 @@
 int mouseX;
 int mouseY;
 
-
-
-
 //------------------------------------------------------------------------------------
 // Program main entry point
 //------------------------------------------------------------------------------------
@@ -40,15 +37,21 @@ int main(void)
 {
   // Initialization
   //--------------------------------------------------------------------------------------
-  struct Rectangle box;
+  struct Rectangle box1;
   Color boxColor = GREEN;
-  box.x = SCREEN_WIDTH / 2;
-  box.y = SCREEN_HEIGHT / 2;
-  box.width = 50;
-  box.height = 50;
+  box1.x = SCREEN_WIDTH / 2;
+  box1.y = SCREEN_HEIGHT / 2;
+  box1.width = 50;
+  box1.height = 50;
+
+  struct Rectangle box2;
+  box2.x = 30;
+  box2.y = 30;
+  box2.width = 30;
+  box2.height = 30;
   
-
-
+  Vector2 size = { (float)30, (float)30 };
+  Vector2 ballPosition = { (float)SCREEN_WIDTH / 2, (float)SCREEN_HEIGHT / 2 };
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Game window");
 
   SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
@@ -57,18 +60,14 @@ int main(void)
   // Main game loop
   while (!WindowShouldClose())    // Detect window close button or ESC key
   {
-    mouseX = GetMouseX();
-    mouseY = GetMouseY();
+      boxColor = GREEN;
 
     // mouse and box collision check
-    if (ptRecCheck(mouseX, mouseY, box))
+    if (recRecCheck(box1, box2))
     {
       boxColor = RED;
     }
-    else
-    {
-      boxColor = GREEN;
-    }
+    
 
     fullScreen();
 
@@ -77,7 +76,14 @@ int main(void)
 
     ClearBackground(RAYWHITE);
 
-    DrawRectangle(box.x, box.y, box.width, box.height, boxColor);
+    if (IsKeyDown(KEY_RIGHT)) box2.x += 2.0f;
+    if (IsKeyDown(KEY_LEFT)) box2.x -= 2.0f;
+    if (IsKeyDown(KEY_UP)) box2.y -= 2.0f;
+    if (IsKeyDown(KEY_DOWN)) box2.y += 2.0f;
+
+    DrawRectangle(box1.x, box1.y, box1.width, box1.height, boxColor);
+    DrawRectangle(box2.x, box2.y, box2.width, box2.height, boxColor);
+
 
     EndDrawing();
     //----------------------------------------------------------------------------------
