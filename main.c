@@ -52,6 +52,24 @@ int main(void)
   
   Vector2 size = { (float)30, (float)30 };
   Vector2 ballPosition = { (float)SCREEN_WIDTH / 2, (float)SCREEN_HEIGHT / 2 };
+  box.x = SCREEN_WIDTH / 2;
+  box.y = SCREEN_HEIGHT / 2;
+  box.width = 50;
+  box.height = 50;
+
+  Color circle1Color = GREEN;
+  int circle1X = SCREEN_WIDTH / 4;
+  int circle1Y = SCREEN_HEIGHT / 4;
+  float circle1Radius = 50;
+
+
+  Color circle2Color = GREEN;
+  int circle2X = 350;
+  int circle2Y = 400;
+  float circle2Radius = 50;
+  
+
+
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Game window");
 
   SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
@@ -60,7 +78,16 @@ int main(void)
   // Main game loop
   while (!WindowShouldClose())    // Detect window close button or ESC key
   {
-      boxColor = GREEN;
+    boxColor = GREEN;
+    boxColor = GREEN;
+    circle1Color = GREEN;
+    circle2Color = GREEN;
+
+    mouseX = GetMouseX();
+    mouseY = GetMouseY();
+
+    circle2X = GetMouseX();
+    circle2Y = GetMouseY();
 
     // mouse and box collision check
     if (recRecCheck(box1, box2))
@@ -69,10 +96,37 @@ int main(void)
     }
     
 
+
+
+    // mouse and circle collision check
+    if (ptCircleCheck(mouseX, mouseY, circle1X, circle1Y, circle1Radius))
+    {
+      circle1Color = RED;
+    }
+
+
+    // circle and circle collision check
+    if (circleCircleCheck(circle1X, circle1Y, circle1Radius,
+        circle2X, circle2Y, circle2Radius))
+    {
+      circle2Color = RED;
+    }
+
+
+
+    // circle and rectangle collision check.
+    if (circleRecCheck(circle2X, circle2Y, circle1Radius, box))
+    {
+      circle2Color = RED;
+    }
+  
+
+
+
+    //Graphics
     fullScreen();
 
     BeginDrawing();
-
 
     ClearBackground(RAYWHITE);
 
@@ -84,6 +138,10 @@ int main(void)
     DrawRectangle(box1.x, box1.y, box1.width, box1.height, boxColor);
     DrawRectangle(box2.x, box2.y, box2.width, box2.height, boxColor);
 
+    // Collision check objects 
+    DrawRectangle(box.x, box.y, box.width, box.height, boxColor);
+    DrawCircle(circle1X, circle1Y, circle1Radius, circle1Color);
+    DrawCircle(circle2X, circle2Y, circle2Radius, circle2Color);
 
     EndDrawing();
     //----------------------------------------------------------------------------------
