@@ -46,6 +46,17 @@ int main(void)
   box.y = SCREEN_HEIGHT / 2;
   box.width = 50;
   box.height = 50;
+
+  Color circle1Color = GREEN;
+  int circle1X = SCREEN_WIDTH / 4;
+  int circle1Y = SCREEN_HEIGHT / 4;
+  float circle1Radius = 50;
+
+
+  Color circle2Color = GREEN;
+  int circle2X = 350;
+  int circle2Y = 400;
+  float circle2Radius = 50;
   
 
 
@@ -57,27 +68,59 @@ int main(void)
   // Main game loop
   while (!WindowShouldClose())    // Detect window close button or ESC key
   {
+    boxColor = GREEN;
+    circle1Color = GREEN;
+    circle2Color = GREEN;
+
     mouseX = GetMouseX();
     mouseY = GetMouseY();
+
+    circle2X = GetMouseX();
+    circle2Y = GetMouseY();
 
     // mouse and box collision check
     if (ptRecCheck(mouseX, mouseY, box))
     {
       boxColor = RED;
     }
-    else
+
+
+    // mouse and circle collision check
+    if (ptCircleCheck(mouseX, mouseY, circle1X, circle1Y, circle1Radius))
     {
-      boxColor = GREEN;
+      circle1Color = RED;
     }
 
+
+    // circle and circle collision check
+    if (circleCircleCheck(circle1X, circle1Y, circle1Radius,
+        circle2X, circle2Y, circle2Radius))
+    {
+      circle2Color = RED;
+    }
+
+
+
+    // circle and rectangle collision check.
+    if (circleRecCheck(circle2X, circle2Y, circle1Radius, box))
+    {
+      circle2Color = RED;
+    }
+  
+
+
+
+    //Graphics
     fullScreen();
 
     BeginDrawing();
 
-
     ClearBackground(RAYWHITE);
 
+    // Collision check objects 
     DrawRectangle(box.x, box.y, box.width, box.height, boxColor);
+    DrawCircle(circle1X, circle1Y, circle1Radius, circle1Color);
+    DrawCircle(circle2X, circle2Y, circle2Radius, circle2Color);
 
     EndDrawing();
     //----------------------------------------------------------------------------------
