@@ -30,9 +30,6 @@
 int mouseX;
 int mouseY;
 
-
-
-
 //------------------------------------------------------------------------------------
 // Program main entry point
 //------------------------------------------------------------------------------------
@@ -40,8 +37,21 @@ int main(void)
 {
   // Initialization
   //--------------------------------------------------------------------------------------
-  struct Rectangle box;
+  struct Rectangle box1;
   Color boxColor = GREEN;
+  box1.x = SCREEN_WIDTH / 2;
+  box1.y = SCREEN_HEIGHT / 2;
+  box1.width = 50;
+  box1.height = 50;
+
+  struct Rectangle box2;
+  box2.x = 30;
+  box2.y = 30;
+  box2.width = 30;
+  box2.height = 30;
+  
+  Vector2 size = { (float)30, (float)30 };
+  Vector2 ballPosition = { (float)SCREEN_WIDTH / 2, (float)SCREEN_HEIGHT / 2 };
   box.x = SCREEN_WIDTH / 2;
   box.y = SCREEN_HEIGHT / 2;
   box.width = 50;
@@ -69,6 +79,7 @@ int main(void)
   while (!WindowShouldClose())    // Detect window close button or ESC key
   {
     boxColor = GREEN;
+    boxColor = GREEN;
     circle1Color = GREEN;
     circle2Color = GREEN;
 
@@ -79,10 +90,12 @@ int main(void)
     circle2Y = GetMouseY();
 
     // mouse and box collision check
-    if (ptRecCheck(mouseX, mouseY, box))
+    if (recRecCheck(box1, box2))
     {
       boxColor = RED;
     }
+    
+
 
 
     // mouse and circle collision check
@@ -116,6 +129,14 @@ int main(void)
     BeginDrawing();
 
     ClearBackground(RAYWHITE);
+
+    if (IsKeyDown(KEY_RIGHT)) box2.x += 2.0f;
+    if (IsKeyDown(KEY_LEFT)) box2.x -= 2.0f;
+    if (IsKeyDown(KEY_UP)) box2.y -= 2.0f;
+    if (IsKeyDown(KEY_DOWN)) box2.y += 2.0f;
+
+    DrawRectangle(box1.x, box1.y, box1.width, box1.height, boxColor);
+    DrawRectangle(box2.x, box2.y, box2.width, box2.height, boxColor);
 
     // Collision check objects 
     DrawRectangle(box.x, box.y, box.width, box.height, boxColor);

@@ -55,6 +55,37 @@ int ptCircleCheck(int pX, int pY, int cX, int cY, float cRadius)
   }
 }
 
+/*********************************************************************************
+ circleCircleCheck: This function checks to see if a rectangle is colliding with
+                a rectangle.
+
+ Returns - Returns a 1 if the two objects are colliding, a 0 if
+           they aren't.
+*********************************************************************************/
+int recRecCheck(Rectangle rec1, Rectangle rec2) {
+    //variable declarations
+    int X1max = rec1.x + rec1.width;
+    int X2max = rec2.x + rec2.width;
+    int Y1max = rec1.y + rec1.height;
+    int Y2max = rec2.y + rec2.height;
+
+    //if rectangle 1 is in the bounds of rectangle 2
+    if (
+        rec1.x < X2max &&
+        X1max > rec2.x &&
+        rec1.y < Y2max &&
+        Y1max > rec2.y
+       )
+    {
+        //they are colliding
+        return 1;
+    }
+    else {
+        //they are not colliding
+        return 0;
+    }
+}
+
 /*****************************************************************************
  circleCircleCheck: This function checks to see if a circle is colliding with
                 a circle.
