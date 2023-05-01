@@ -1,14 +1,3 @@
-﻿  main.c
-C:\Users\jason\source\repos\SummerGameRepo\collision.h(32,24): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\collision.h(33,24): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\collision.h(34,24): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\collision.h(35,24): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\main.c(84,23): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\main.c(84,31): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\main.c(84,39): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\main.c(84,51): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\main.c(85,23): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\main.c(85,31): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\main.c(85,39): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\jason\source\repos\SummerGameRepo\main.c(85,51): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-  SummerGame.vcxproj -> C:\Users\jason\source\repos\SummerGameRepo\x64\Debug\SummerGame.exe
+﻿  blankState.c
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  SummerGame.vcxproj -> D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\x64\Debug\SummerGame.exe
