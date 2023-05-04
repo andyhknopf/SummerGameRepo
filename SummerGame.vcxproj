@@ -128,18 +128,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="blankState.c" />
     <ClCompile Include="collision.c" />
     <ClCompile Include="init.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="menu.c" />
+    <ClCompile Include="player.c" />
+    <ClCompile Include="testState.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="blankState.h" />
     <ClInclude Include="collision.h" />
     <ClInclude Include="init.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="player.h" />
     <ClInclude Include="raylib.h" />
+    <ClInclude Include="test.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
