@@ -8,6 +8,7 @@ void PlayerInit(void)
   /* Initial position for scene */
   player.x = GetScreenWidth() / 2;  // Player center's x-coordinate.
   player.y = GetScreenHeight() / 2; // Player center's y-coordinate.
+  player.position = (Vector2){player.x, player.y};
   player.rotation = 0; // Default angle facing north.
  
   Vector2 mousePos = { 0, 0 }; // Mouse position as Raylib Vector2
@@ -44,8 +45,8 @@ void PlayerUpdate(void)
   playerBody.x = player.x;
   playerBody.y = player.y;
 
-  playerHeadColor = GRAY;
-  playerBodyColor = DARKGRAY;
+  player.position = (Vector2){ player.x, player.y };
+
 }
 
 int MovePlayer(void)
@@ -94,11 +95,16 @@ int PlayerIsMoving(void)
 void DrawPlayerHitbox(void)
 {
   playerHeadColor = DARKGRAY;
+  playerBodyColor = GRAY;
 
   // Player Model
   DrawCircle(player.x, player.y, player.headRadius, playerHeadColor); // Player head
-  DrawRectanglePro(playerBody, (Vector2) { playerBody.width / 2,  // Player body
-                   playerBody.height / 2}, player.rotation, GRAY);// (height and width are reversed for some reason?)
+
+  // Player body width and height are reversed for some reason?
+  DrawRectanglePro(playerBody, (Vector2) { playerBody.width / 2,   
+                   playerBody.height / 2}, player.rotation, GRAY);
+
+  DrawLine(player.x, player.y, mouse.x, mouse.y, BLACK);
 }
 
 float CalcAngleToMouse(float xPos, float yPos)
@@ -108,6 +114,18 @@ float CalcAngleToMouse(float xPos, float yPos)
                          (GetMouseX() - xPos));
 
   float degrees = radians * (180.0f / PI);
+
+  return degrees;
+}
+
+float CalcAngleToPlayer(float xPos, float yPos)
+{
+  float radians = atan2f((player.y - yPos),
+    (player.x - xPos));
+
+  float degrees = radians * (180.0f / PI);
+
+  return degrees;
 }
 
 //int EntityCollidingWithPlayer(struct Entity entity)

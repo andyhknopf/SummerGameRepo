@@ -36,6 +36,9 @@
     <ClCompile Include="transform.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="enemies.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="raylib.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="enemies.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

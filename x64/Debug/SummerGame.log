@@ -1,13 +1,1 @@
-﻿  player.c
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(9,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(10,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(42,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(43,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(109,20): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(109,30): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(118,18): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(118,28): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(118,37): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(118,46): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(128): warning C4716: 'CalcAngleToMouse': must return a value
-  SummerGame.vcxproj -> D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\x64\Debug\SummerGame.exe
+﻿  SummerGame.vcxproj -> D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\x64\Debug\SummerGame.exe

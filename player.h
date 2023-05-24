@@ -39,6 +39,8 @@ int PlayerIsMoving(void);
 
 float CalcAngleToMouse(float xPos, float yPos);
 
+float CalcAngleToPlayer(float xPos, float yPos);
+
 void DrawPlayerHitbox(void);
 
 //int EntityCollidingWithPlayer(struct Entity entity);

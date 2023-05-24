@@ -9,6 +9,7 @@ REPLACE THIS LINE & ALL INSTANCES OF "test" OR "test" WITH THE PROPER TITLE.
 #include "player.h"
 #include "test.h"
 #include <stdio.h>  // printf()+
+#include "enemies.h"
 #include "transform.h"
 
 
@@ -22,6 +23,7 @@ void testInit(void)
 {
   // Initialize all assets.
   PlayerInit();
+  enemyInit();
   Vector2 rotatingPoint = { 300, 300 };
   Vector2 anchorPoint = { SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 };
 }
@@ -40,22 +42,16 @@ void testUpdate(void)
   {
     /* Game logic and variable updates. */
     PlayerUpdate();
+    enemyUpdate();
 
-    if (IsKeyDown(KEY_R))
-    {
-      rotatingPoint.x = RotateAroundPointX(player.x, rotatingPoint.x,
-        CalcAngleToMouse(player.x, player.y));
-      rotatingPoint.y = RotateAroundPointY(player.y, rotatingPoint.y,
-        CalcAngleToMouse(player.x, player.y));
-    }
-
-    
     /* Graphics */
     BeginDrawing();
 
     ClearBackground(RAYWHITE);
     
     DrawPlayerHitbox();
+
+    DrawEnemyHitbox();
 
     EndDrawing();
   }
