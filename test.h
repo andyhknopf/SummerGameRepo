@@ -29,3 +29,6 @@ void testUpdate(void);
           void - Void function, returns nothing.
 ******************************************************************************/
 void runTestState(char mode);
+
+Vector2 rotatingPoint;
+Vector2 anchorPoint;

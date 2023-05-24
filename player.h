@@ -11,6 +11,8 @@ struct PlayerType
   float movementSpeed;         // Default velocity of the player
   float directionVectorLength; // Length of direction vector of the player
 
+  Vector2 position;
+
   /* Player state */
   int health;
 
@@ -20,7 +22,6 @@ struct PlayerType
 
 struct PlayerType player;
 
-Vector2 playerOrigin;
 Vector2 mouse;
 
 Rectangle playerBody;

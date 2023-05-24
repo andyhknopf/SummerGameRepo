@@ -134,6 +134,7 @@
     <ClCompile Include="menu.c" />
     <ClCompile Include="player.c" />
     <ClCompile Include="testState.c" />
+    <ClCompile Include="transform.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="collision.h" />
@@ -142,6 +143,7 @@
     <ClInclude Include="player.h" />
     <ClInclude Include="raylib.h" />
     <ClInclude Include="test.h" />
+    <ClInclude Include="transform.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
