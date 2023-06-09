@@ -129,21 +129,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="collision.c" />
+    <ClCompile Include="debug.c" />
     <ClCompile Include="enemies.c" />
     <ClCompile Include="init.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="menu.c" />
+    <ClCompile Include="objects.c" />
     <ClCompile Include="player.c" />
+    <ClCompile Include="system.c" />
     <ClCompile Include="testState.c" />
     <ClCompile Include="transform.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="collision.h" />
+    <ClInclude Include="debug.h" />
     <ClInclude Include="enemies.h" />
     <ClInclude Include="init.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="objects.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="raylib.h" />
+    <ClInclude Include="system.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="transform.h" />
   </ItemGroup>

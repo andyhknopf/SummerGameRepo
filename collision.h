@@ -1,3 +1,4 @@
+
 #pragma once
 
 int ptRecCheck(int pX, int pY, Rectangle rec);
@@ -11,8 +12,11 @@ int circleCircleCheck(int circ1X, int circ1Y, float circ1Radius,
 
 int circleRecCheck(int circX, int circY, float circRadius, Rectangle rec);
 
+int PlayerCollidingWithEnemy(struct PlayerType* playerPtr, struct EnemyType* enemyPtr);
 
+int PlayerHitEnemy(struct PlayerType* playerPtr, struct EnemyType* enemyPtr);
 
+void EnemyTakeDamage(struct EnemyType* enemy, int damage);
 
 
 

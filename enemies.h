@@ -10,19 +10,22 @@ struct EnemyType
   float width;
   float height;
   float rotation;              // Rotation angle in degrees
+  Rectangle Body;
 
   Vector2 position;
 
   /* Player state */
   int health;
+  double timeSinceHit;
 
   /* Graphics information */
   float headRadius;
+  Color color;
 };
 
 struct EnemyType testEnemy;
 
-Rectangle enemyBody;
+
 
 Vector2 VecToPlayer;
 

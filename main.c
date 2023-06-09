@@ -1,4 +1,4 @@
-/*******************************************************************************************
+/******************************************************************************
 *
 *   raylib [core] example - Basic window
 *
@@ -19,7 +19,7 @@
 *
 *   Copyright (c) 2013-2023 Ramon Santamaria (@raysan5)
 *
-********************************************************************************************/
+******************************************************************************/
 
 //header links
 #include "raylib.h"
@@ -28,28 +28,21 @@
 #include "collision.h"
 
 
-
-//------------------------------------------------------------------------------------
-// Program main entry point
-//------------------------------------------------------------------------------------
 int main(void)
 {
-  // Initialization
-  //--------------------------------------------------------------------------------------
+  /************************* Initialization **********************************/
   
-  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Game window");
-  
- 
+  // Start openGL context
+  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Game window"); 
 
-  SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
-  //--------------------------------------------------------------------------------------
+  // Set target framerate
+  SetTargetFPS(60);                                       
 
-  // Main game loop
+  /* Game main entry point */
   runMenuState('s');
-  // De-Initialization
-  //--------------------------------------------------------------------------------------
-  CloseWindow();        // Close window and OpenGL context
-  //--------------------------------------------------------------------------------------
+
+  // Close window and OpenGL context
+  CloseWindow();        
 
   return 0;
 }

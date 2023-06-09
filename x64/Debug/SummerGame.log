@@ -1,1 +1,12 @@
-﻿  SummerGame.vcxproj -> D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\x64\Debug\SummerGame.exe
+﻿  player.c
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(14,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(15,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(101,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(102,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(122,20): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(122,30): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(129,18): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(129,28): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(129,37): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\player.c(129,46): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+  SummerGame.vcxproj -> D:\GameDev\SummerGame\ProjectFiles\SummerGame\SummerGame\SummerGameRepo\x64\Debug\SummerGame.exe

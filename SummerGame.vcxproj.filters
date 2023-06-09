@@ -39,6 +39,15 @@
     <ClCompile Include="enemies.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="debug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="system.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="objects.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="raylib.h">
@@ -63,6 +72,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="enemies.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -11,7 +11,18 @@ REPLACE THIS LINE & ALL INSTANCES OF "test" OR "test" WITH THE PROPER TITLE.
 #include <stdio.h>  // printf()+
 #include "enemies.h"
 #include "transform.h"
+#include "debug.h"
+#include "system.h"
+#include <math.h>
 
+float bulletStartX;
+float bulletStartY;
+float bulletCurrentX;
+float bulletCurrentY;
+float bulletDeltaX;
+float bulletDeltaY;
+
+Timer bulletTimer;
 
 /**************************************************************************
  testInit - Standard template for a new scene's initialization function.
@@ -24,8 +35,10 @@ void testInit(void)
   // Initialize all assets.
   PlayerInit();
   enemyInit();
-  Vector2 rotatingPoint = { 300, 300 };
-  Vector2 anchorPoint = { SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 };
+
+  bulletTimer.isActive = 0;
+  bulletTimer.lifeTime = 1;
+
 }
 
 /**************************************************************************
@@ -37,12 +50,35 @@ void testInit(void)
 **************************************************************************/
 void testUpdate(void)
 {
+  int timerFlag;
+
   /* Will run once every frame */
   while (!WindowShouldClose())
   {
     /* Game logic and variable updates. */
     PlayerUpdate();
     enemyUpdate();
+
+    bulletStartX = player.x;
+    bulletStartY = player.y;
+
+    if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
+    {
+      bulletCurrentX = bulletStartX;
+      bulletCurrentY = bulletStartY;
+      bulletDeltaX = mouse.x - player.x;
+      bulletDeltaY = mouse.y - player.y;
+      StartTimer(&bulletTimer, 1.00);
+    }
+
+    timerFlag = UpdateTimer(&bulletTimer);
+
+    if (timerFlag == 1)
+    {
+      bulletCurrentX += bulletDeltaX * GetFrameTime();
+      bulletCurrentY += bulletDeltaY * GetFrameTime();
+    }
+    
 
     /* Graphics */
     BeginDrawing();
@@ -52,6 +88,13 @@ void testUpdate(void)
     DrawPlayerHitbox();
 
     DrawEnemyHitbox();
+
+    DrawDebug();
+
+    if (timerFlag == 1)
+    {
+      DrawCircle(bulletCurrentX, bulletCurrentY, 10, GREEN);
+    }
 
     EndDrawing();
   }

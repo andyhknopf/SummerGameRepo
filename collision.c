@@ -1,4 +1,8 @@
 #include "raylib.h"
+#include "player.h"
+#include "objects.h"
+#include "collision.h"
+#include "enemies.h"
 #include <math.h>
 
 /***********************************************************************
@@ -160,4 +164,21 @@ int circleRecCheck(int circX, int circY, float circRadius, Rectangle rec)
     // They are not colliding.
     return 0;
   }
+}
+
+int PlayerCollidingWithEnemy(struct PlayerType* playerPtr, struct EnemyType * enemyPtr)
+{
+  // status is 1 if they are colliding, 0 if they are not.
+  int status = circleCircleCheck(enemyPtr->x, enemyPtr->y, enemyPtr->headRadius,
+                               playerPtr->x, playerPtr->y, playerPtr->headRadius);
+  
+  return status;
+}
+
+
+int PlayerHitEnemy(struct PlayerType* playerPtr, struct EnemyType* enemyPtr)
+{
+  int status = recRecCheck(playerPtr->AttackBox, enemyPtr->Body);
+
+  return status;
 }
